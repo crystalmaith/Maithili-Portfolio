@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+
+@layer base {
+  :root {
+    /* Primary Palette */
+    --navy: 213 31% 26%;
+    --teal: 197 24% 44%;
+    --sky-blue: 204 35% 85%;
+    --beige: 34 33% 94%;
+    --white: 0 0% 100%;
+
+    /* Semantic Mappings */
+    --background: 34 33% 94%;
+    --foreground: 213 31% 26%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 213 31% 26%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 31% 26%;
+
+    --primary: 213 31% 26%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 204 35% 85%;
+    --secondary-foreground: 213 31% 26%;
+
+    --muted: 34 33% 94%;
+    --muted-foreground: 197 24% 44%;
+
+    --accent: 197 24% 44%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 204 35% 85%;
+    --input: 204 35% 85%;
+    --ring: 197 24% 44%;
+
+    --radius: 0.75rem;
+
+    /* Typography */
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Source Sans 3', system-ui, sans-serif;
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(213 31% 26% / 0.08);
+    --shadow-hover: 0 8px 30px -4px hsl(213 31% 26% / 0.15);
+    --shadow-card: 0 2px 12px -2px hsl(213 31% 26% / 0.06);
+
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 213 31% 12%;
+    --foreground: 34 33% 94%;
+
+    --card: 213 31% 16%;
+    --card-foreground: 34 33% 94%;
+
+    --popover: 213 31% 16%;
+    --popover-foreground: 34 33% 94%;
+
+    --primary: 34 33% 94%;
+    --primary-foreground: 213 31% 26%;
+
+    --secondary: 213 31% 20%;
+    --secondary-foreground: 34 33% 94%;
+
+    --muted: 213 31% 20%;
+    --muted-foreground: 204 35% 75%;
+
+    --accent: 197 24% 44%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 213 31% 20%;
+    --input: 213 31% 20%;
+    --ring: 197 24% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-wide;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-20 md:py-28 px-6 md:px-12;
+  }
+
+  .heading-display {
+    @apply font-serif text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wide text-primary leading-tight;
+  }
+
+  .heading-section {
+    @apply font-serif text-3xl md:text-4xl font-semibold tracking-wide text-primary;
+  }
+
+  .heading-card {
+    @apply font-serif text-xl md:text-2xl font-medium text-primary;
+  }
+
+  .body-text {
+    @apply font-sans text-base md:text-lg font-light leading-relaxed text-muted-foreground tracking-wide;
+  }
+
+  .nav-link {
+    @apply font-sans text-sm uppercase tracking-[0.2em] text-primary/70 hover:text-accent transition-all duration-300;
+  }
+
+  .nav-link-active {
+    @apply text-accent font-medium;
+  }
+
+  .card-elegant {
+    @apply bg-card rounded-2xl shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-hover)] transition-all duration-500;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-sans text-sm uppercase tracking-[0.15em] rounded-lg hover:bg-accent transition-all duration-300;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary font-sans text-sm uppercase tracking-[0.15em] rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300;
+  }
+
+  .icon-social {
+    @apply w-10 h-10 flex items-center justify-center rounded-full border border-primary/20 text-primary hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300;
+  }
+
+  .badge-hobby {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-secondary text-primary font-sans text-sm rounded-full;
+  }
+}
+
+@layer utilities {
+  .bg-navy { background-color: hsl(var(--navy)); }
+  .bg-teal { background-color: hsl(var(--teal)); }
+  .bg-sky-blue { background-color: hsl(var(--sky-blue)); }
+  .bg-beige { background-color: hsl(var(--beige)); }
+  
+  .text-navy { color: hsl(var(--navy)); }
+  .text-teal { color: hsl(var(--teal)); }
+  
+  .border-sky-blue { border-color: hsl(var(--sky-blue)); }
+}
