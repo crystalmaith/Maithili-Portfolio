@@ -1,4 +1,11 @@
-import { MapPin } from "lucide-react";
+import { Github, Linkedin, Twitter, Facebook, MapPin } from "lucide-react";
+
+const socialLinks = [
+  { icon: Github, href: "https://github.com/crystalmaith", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/maithili-sharma-306575240/", label: "LinkedIn" },
+  { icon: Twitter, href: "https://twitter.com/elonmusk", label: "Twitter" },
+  { icon: Facebook, href: "https://www.facebook.com/maithili.sharma.52/", label: "Facebook" },
+];
 
 const HeroSection = () => {
   return (
@@ -12,6 +19,25 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Social Icons - Desktop */}
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-4">
+            {socialLinks.map((social, index) => {
+              const Icon = social.icon;
+              return (
+                <a
+                  key={`desktop-${social.label}`}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 flex items-center justify-center rounded-full border border-foreground/20 text-foreground/70 hover:bg-foreground hover:text-background transition-all duration-300 opacity-0 animate-fade-up"
+                  style={{ animationDelay: `${800 + index * 100}ms` }}
+                  aria-label={social.label}
+                >
+                  <Icon className="w-5 h-5" />
+                </a>
+              );
+            })}
+          </div>
 
           {/* Main Content */}
           <div className="space-y-8">
@@ -38,6 +64,25 @@ const HeroSection = () => {
               </a>
             </div>
 
+            {/* Social Icons - Mobile */}
+            <div className="flex justify-center gap-4 pt-6 md:hidden">
+              {socialLinks.map((social, index) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={`mobile-${social.label}`}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 flex items-center justify-center rounded-full border border-foreground/20 text-foreground/70 hover:bg-foreground hover:text-background transition-all duration-300 opacity-0 animate-fade-up"
+                    style={{ animationDelay: `${1000 + index * 100}ms` }}
+                    aria-label={social.label}
+                  >
+                    <Icon className="w-5 h-5" />
+                  </a>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
