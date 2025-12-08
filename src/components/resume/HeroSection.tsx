@@ -51,8 +51,8 @@ const HeroSection = () => {
             </h1>
 
             <p className="body-text max-w-2xl mx-auto opacity-0 animate-fade-up" style={{ animationDelay: "600ms" }}>
-              A passionate creative professional dedicated to crafting meaningful digital experiences 
-              through elegant design and thoughtful development.
+              A tech enthusiast focused on intelligent systems, data-driven solutions, and modern web experiences. 
+              I enjoy building products where clean design meets thoughtful engineering and real-world impact.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 pt-4 opacity-0 animate-fade-up" style={{ animationDelay: "800ms" }}>
