@@ -46,28 +46,9 @@ const FooterSection = () => {
 
             {/* Right Column - Contact Info */}
             <div className="space-y-6">
-              <div className="flex justify-between items-center">
-                <h3 className="font-serif text-xl font-medium tracking-wide text-primary-foreground/90">
-                  Contact Information
-                </h3>
-                <div className="flex gap-3">
-                  {socialLinks.map((social) => {
-                    const Icon = social.icon;
-                    return (
-                      <a
-                        key={`right-${social.label}`}
-                        href={social.href}
-                        className="w-8 h-8 flex items-center justify-center rounded-full border border-primary-foreground/20 text-primary-foreground/70 hover:bg-primary-foreground hover:text-navy transition-all duration-300"
-                        aria-label={social.label}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Icon className="w-4 h-4" />
-                      </a>
-                    );
-                  })}
-                </div>
-              </div>
+              <h3 className="font-serif text-xl font-medium tracking-wide text-primary-foreground/90">
+                Contact Information
+              </h3>
               
               <div className="space-y-4">
                 <a
