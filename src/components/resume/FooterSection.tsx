@@ -3,8 +3,8 @@ import { Github, Linkedin, Twitter, Facebook, Mail, Phone, MapPin } from "lucide
 const socialLinks = [
   { icon: Github, href: "https://github.com/crystalmaith", label: "GitHub", target: "_blank" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/maithili-sharma-306575240/", label: "LinkedIn", target: "_blank" },
-  { icon: Twitter, href: "https://twitter.com/elonmusk", label: "Twitter", target: "_blank" },
-  { icon: Facebook, href: "https://www.facebook.com/maithili.sharma.52/", label: "Facebook", target: "_blank" },
+  { icon: Twitter, href: "https://twitter.com/maithilisharma", label: "Twitter", target: "_blank" },
+  { icon: Facebook, href: "https://www.facebook.com/maithili.sharma.12345", label: "Facebook", target: "_blank" },
 ];
 
 const FooterSection = () => {
@@ -30,12 +30,10 @@ const FooterSection = () => {
                   const Icon = social.icon;
                   return (
                     <a
-                      key={`left-${social.label}`}
+                      key={social.label}
                       href={social.href}
                       className="w-10 h-10 flex items-center justify-center rounded-full border border-primary-foreground/20 text-primary-foreground/70 hover:bg-primary-foreground hover:text-navy transition-all duration-300"
                       aria-label={social.label}
-                      target="_blank"
-                      rel="noopener noreferrer"
                     >
                       <Icon className="w-5 h-5" />
                     </a>
