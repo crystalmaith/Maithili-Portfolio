@@ -65,14 +65,15 @@ const projects = [
     projectUrl: "https://bake-n-cake.vercel.app/"
   },
   {
-    id: 8,
-    title: "Maithili's Home Bakery",
-    description:
-      "A cloud-kitchen website for a home bakery that allows customers to explore offerings, view galleries, and place direct orders online.",
-    tech: ["React", "Next.js", "Tailwind CSS", "Firebase", "Razorpay"],
-    bgColor: "bg-secondary",
-    projectUrl: "https://github.com/crystalmaith/maithilis-sweet-kitchen"
-  },
+  id: 8,
+  title: "Maithili's Home Bakery",
+  description:
+    "A personal recipe management web app built for organizing, saving, and adding homemade baking recipes, with a warm, bakery-inspired UI designed for personal use.",
+  tech: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Firebase"],
+  bgColor: "bg-secondary",
+   projectUrl: "https://github.com/crystalmaith/maithilis-sweet-kitchen"
+},
+
   {
     id: 9,
     title: "The Daily Bugle",
