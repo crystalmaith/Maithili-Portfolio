@@ -3,45 +3,84 @@ import { ArrowUpRight } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Finance Assistant",
-    description: "A modern AI experience to understand and handle your own finace better.",
-    tech: ["React", "Node.js", "MongoDB", "TypeScript"],
+    title: "Finance AI Assistant",
+    description:
+      "An AI-powered personal finance assistant that helps users analyze expenses, track investments, understand financial documents, and make smarter money decisions using intelligent insights.",
+    tech: ["React", "TypeScript", "Node.js", "Python", "OpenAI API", "MongoDB"],
     bgColor: "bg-card",
+    projectUrl: "https://rupeeai.vercel.app/login"
   },
   {
     id: 2,
     title: "Medical Chatbot using RAG",
-    description: "Interactive analytics dashboard for tracking investments and financial goals with real-time data.",
-    tech: ["TypeScript", "Next.js", "PostgreSQL", "Chart.js"],
+    description:
+      "A retrieval-augmented medical chatbot that provides accurate, context-aware answers by combining large language models with trusted medical knowledge sources.",
+    tech: ["Next.js", "TypeScript", "Python", "LangChain", "Vector DB", "PostgreSQL"],
     bgColor: "bg-secondary",
+    projectUrl: "https://github.com/crystalmaith/Medical-Health-chatbot-Strictly-RAG-"
   },
   {
     id: 3,
-    title: "Dungeons and Dragons",
-    description: "First D&D game where AI is the Dungeon Master, using the basics of LangChain and LangGraph to play the master",
-    tech: ["React Native", "Firebase", "Redux", "Figma"],
+    title: "Volatility Trading AI Assistant",
+    description:
+      "An AI-driven trading assistant that forecasts market volatility, analyzes sectoral risk, and supports data-backed trading decisions using quantitative and statistical models.",
+    tech: ["Python", "Pandas", "NumPy", "MGARCH", "Machine Learning", "Streamlit"],
     bgColor: "bg-card",
+    projectUrl: "https://github.com/crystalmaith/volatility-aware-trading-assistant"
   },
-   {
-    id: 3,
-    title: "Dungeons and Dragons",
-    description: "First D&D game where AI is the Dungeon Master, using the basics of LangChain and LangGraph to play the master",
-    tech: ["React Native", "Firebase", "Redux", "Figma"],
-    bgColor: "bg-card",
+  {
+    id: 4,
+    title: "Dungeons & Dragons — AI Dungeon Master",
+    description:
+      "An interactive D&D game where an AI-powered Dungeon Master dynamically generates storylines, characters, and outcomes using agent-based reasoning.",
+    tech: ["React", "LangChain", "LangGraph", "OpenAI API", "Firebase"],
+    bgColor: "bg-secondary",
+    projectUrl: "#"
   },
-   {
-    id: 3,
-    title: "Dungeons and Dragons",
-    description: "First D&D game where AI is the Dungeon Master, using the basics of LangChain and LangGraph to play the master",
-    tech: ["React Native", "Firebase", "Redux", "Figma"],
+  {
+    id: 5,
+    title: "Retirement Planner using SIP",
+    description:
+      "A financial planning tool that helps users estimate retirement savings using SIP calculations, future value modeling, and personalized investment strategies.",
+    tech: ["React", "JavaScript", "Financial Modeling", "Chart.js", "Tailwind CSS"],
     bgColor: "bg-card",
+    projectUrl: "https://retirement-planner-nff4m6faawkmqtyqotngrp.streamlit.app/"
   },
-   {
-    id: 3,
-    title: "Dungeons and Dragons",
-    description: "First D&D game where AI is the Dungeon Master, using the basics of LangChain and LangGraph to play the master",
-    tech: ["React Native", "Firebase", "Redux", "Figma"],
+  {
+    id: 6,
+    title: "AI-Powered SDLC Assistant",
+    description:
+      "An intelligent SDLC assistant that reviews repositories, identifies risks, scores projects using the 12-factor framework, and provides AI-generated improvement insights.",
+    tech: ["Python", "Streamlit", "LLMs", "LangGraph", "GitHub API"],
+    bgColor: "bg-secondary",
+    projectUrl: "https://ai-sdlc-scribe.vercel.app/"
+  },
+  {
+    id: 7,
+    title: "Bake n' Cake Webpage",
+    description:
+      "A dreamy, vintage-themed bakery website showcasing products, galleries, and customer outcomes with a delightful visual-first experience.",
+    tech: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "Figma"],
     bgColor: "bg-card",
+    projectUrl: "https://bake-n-cake.vercel.app/"
+  },
+  {
+    id: 8,
+    title: "Maithili's Home Bakery",
+    description:
+      "A cloud-kitchen website for a home bakery that allows customers to explore offerings, view galleries, and place direct orders online.",
+    tech: ["React", "Next.js", "Tailwind CSS", "Firebase", "Razorpay"],
+    bgColor: "bg-secondary",
+    projectUrl: "https://github.com/crystalmaith/maithilis-sweet-kitchen"
+  },
+  {
+    id: 9,
+    title: "The Daily Bugle",
+    description:
+      "A modern news web app that aggregates real-time headlines, analyzes sentiment, and delivers AI-powered summaries across multiple categories.",
+    tech: ["Next.js", "TypeScript", "News APIs", "NLP", "OpenAI API"],
+    bgColor: "bg-card",
+    projectUrl: "https://github.com/crystalmaith/Maithilis-Daily-Bugle"
   },
 ];
 
@@ -93,14 +132,20 @@ const ProjectsSection = () => {
                   ))}
                 </div>
 
-                {/* CTA */}
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-2 font-sans text-sm uppercase tracking-[0.15em] text-primary hover:text-accent transition-colors duration-300 group/link"
-                >
-                  View Project
-                  <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-                </a>
+                {/* Project Link */}
+                {project.projectUrl && (
+                  <div className="mt-4 pt-4 border-t border-border/20">
+                    <a
+                      href={project.projectUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-sm font-sans text-accent hover:underline group"
+                    >
+                      View Project
+                      <ArrowUpRight className="ml-1 w-4 h-4 transition-transform group-hover:-translate-y-0.5" />
+                    </a>
+                  </div>
+                )}
               </article>
             ))}
           </div>
