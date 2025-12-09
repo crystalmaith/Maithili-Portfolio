@@ -22,6 +22,27 @@ const projects = [
     tech: ["React Native", "Firebase", "Redux", "Figma"],
     bgColor: "bg-card",
   },
+   {
+    id: 3,
+    title: "Dungeons and Dragons",
+    description: "First D&D game where AI is the Dungeon Master, using the basics of LangChain and LangGraph to play the master",
+    tech: ["React Native", "Firebase", "Redux", "Figma"],
+    bgColor: "bg-card",
+  },
+   {
+    id: 3,
+    title: "Dungeons and Dragons",
+    description: "First D&D game where AI is the Dungeon Master, using the basics of LangChain and LangGraph to play the master",
+    tech: ["React Native", "Firebase", "Redux", "Figma"],
+    bgColor: "bg-card",
+  },
+   {
+    id: 3,
+    title: "Dungeons and Dragons",
+    description: "First D&D game where AI is the Dungeon Master, using the basics of LangChain and LangGraph to play the master",
+    tech: ["React Native", "Firebase", "Redux", "Figma"],
+    bgColor: "bg-card",
+  },
 ];
 
 const ProjectsSection = () => {

@@ -49,6 +49,9 @@ const HeroSection = () => {
             <h1 className="heading-display opacity-0 animate-fade-up" style={{ animationDelay: "400ms" }}>
               Maithili Sharma
             </h1>
+            <h2 className="text-xl md:text-2xl text-muted-foreground font-sans font-normal opacity-0 animate-fade-up mt-2" style={{ animationDelay: "450ms" }}>
+              AI Engineer
+            </h2>
 
             <p className="body-text max-w-2xl mx-auto opacity-0 animate-fade-up" style={{ animationDelay: "600ms" }}>
               A tech enthusiast focused on intelligent systems, data-driven solutions, and modern web experiences. 
